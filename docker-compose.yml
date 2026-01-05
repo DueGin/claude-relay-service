@@ -4,10 +4,42 @@ version: '3.8'
 # 所有配置通过环境变量设置，无需映射 .env 文件
 
 services:
+  # 🌐 Nginx Reverse Proxy (避免跨域：统一通过同一域名/端口访问)
+  nginx:
+    image: nginx:1.25-alpine
+    restart: unless-stopped
+    profiles:
+      - nginx
+    ports:
+      - "${NGINX_HTTP_PORT:-80}:80"
+      - "${NGINX_HTTPS_PORT:-443}:443"
+    volumes:
+      - ./nginx/nginx.conf:/etc/nginx/nginx.conf:ro
+      - ./nginx/conf.d:/etc/nginx/conf.d:ro
+      - ./nginx/certs:/etc/nginx/certs:ro
+      - ./certbot/www:/var/www/certbot:ro
+    depends_on:
+      - claude-relay
+    networks:
+      - claude-relay-network
+
+  # 🔒 Certbot (Let's Encrypt) - 通过 docker compose run 手动签发/续期
+  certbot:
+    image: certbot/certbot:latest
+    restart: "no"
+    profiles:
+      - nginx
+    volumes:
+      - ./nginx/certs:/etc/letsencrypt
+      - ./certbot/www:/var/www/certbot
+      - ./certbot/logs:/var/log/letsencrypt
+    networks:
+      - claude-relay-network
+
   # 🚀 Flux Code
   claude-relay:
     build: .
-    image: duegin/flux-codex:v1.1.252
+    image: duegin/flux-codex:v1.1.253
     restart: unless-stopped
     ports:
       # 绑定地址：生产环境建议使用反向代理，设置 BIND_HOST=127.0.0.1

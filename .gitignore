@@ -35,6 +35,14 @@ app.log
 config/config.js
 !config/config.example.js
 
+# Nginx TLS certificates (local only)
+nginx/certs/*
+!nginx/certs/.gitkeep
+
+# Certbot (Let's Encrypt) runtime data (local only)
+certbot/*
+!certbot/**/.gitkeep
+
 # Runtime data
 pids/
 *.pid
