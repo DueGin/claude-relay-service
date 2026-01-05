@@ -185,7 +185,7 @@ class WebhookService {
 
     const payload = {
       text,
-      username: 'Claude Relay Service',
+      username: 'Flux Code',
       icon_emoji: this.getSlackEmoji(type)
     }
 
@@ -199,7 +199,7 @@ class WebhookService {
     const embed = this.formatMessageForDiscord(type, data)
 
     const payload = {
-      username: 'Claude Relay Service',
+      username: 'Flux Code',
       embeds: [embed]
     }
 
@@ -309,7 +309,7 @@ class WebhookService {
       const mailOptions = {
         from: platform.from || platform.user, // 发送者
         to: platform.to, // 接收者（必填）
-        subject: `[Claude Relay Service] ${subject}`,
+        subject: `[Flux Code] ${subject}`,
         text: textContent,
         html: htmlContent
       }
@@ -399,7 +399,7 @@ class WebhookService {
     const details = this.formatNotificationDetails(data)
     return (
       `## ${title}\n\n` +
-      `> **服务**: Claude Relay Service\n` +
+      `> **服务**: Flux Code\n` +
       `> **时间**: ${new Date().toLocaleString('zh-CN', { timeZone: this.timezone })}\n\n${details}`
     )
   }
@@ -411,7 +411,7 @@ class WebhookService {
     const details = this.formatNotificationDetails(data)
 
     return (
-      `#### 服务: Claude Relay Service\n` +
+      `#### 服务: Flux Code\n` +
       `#### 时间: ${new Date().toLocaleString('zh-CN', { timeZone: this.timezone })}\n\n${details}`
     )
   }
@@ -496,7 +496,7 @@ class WebhookService {
     const timestamp = new Date().toLocaleString('zh-CN', { timeZone: this.timezone })
     const details = this.buildNotificationDetails(data)
 
-    const lines = [`${title}`, '服务: Claude Relay Service']
+    const lines = [`${title}`, '服务: Flux Code']
 
     if (details.length > 0) {
       lines.push('')
@@ -524,7 +524,7 @@ class WebhookService {
       fields,
       timestamp: getISOStringWithTimezone(new Date()),
       footer: {
-        text: 'Claude Relay Service'
+        text: 'Flux Code'
       }
     }
   }
@@ -616,7 +616,7 @@ class WebhookService {
     }
 
     // 添加服务标识和时间戳
-    lines.push(`\n服务: Claude Relay Service`)
+    lines.push(`\n服务: Flux Code`)
     lines.push(`时间: ${new Date().toLocaleString('zh-CN', { timeZone: this.timezone })}`)
 
     return lines.join('\n')
@@ -668,7 +668,7 @@ class WebhookService {
       <div style="max-width: 600px; margin: 0 auto; font-family: Arial, sans-serif;">
         <div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 20px; border-radius: 8px 8px 0 0;">
           <h1 style="margin: 0; font-size: 24px;">${title}</h1>
-          <p style="margin: 10px 0 0 0; opacity: 0.9;">Claude Relay Service</p>
+          <p style="margin: 10px 0 0 0; opacity: 0.9;">Flux Code</p>
         </div>
         <div style="background: #f8f9fa; padding: 20px; border: 1px solid #e9ecef; border-top: none; border-radius: 0 0 8px 8px;">
           <div style="background: white; padding: 16px; border-radius: 6px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
@@ -689,7 +689,7 @@ class WebhookService {
           </div>
           <div style="margin-top: 20px; padding-top: 16px; border-top: 1px solid #e9ecef; font-size: 14px; color: #6c757d; text-align: center;">
             <p>发送时间: ${timestamp}</p>
-            <p style="margin: 0;">此邮件由 Claude Relay Service 自动发送</p>
+            <p style="margin: 0;">此邮件由 Flux Code 自动发送</p>
           </div>
         </div>
       </div>
@@ -715,7 +715,7 @@ class WebhookService {
     })
 
     content += `\n发送时间: ${timestamp}\n`
-    content += `服务: Claude Relay Service\n`
+    content += `服务: Flux Code\n`
     content += `=====================================\n`
     content += `此邮件由系统自动发送，请勿回复。`
 
@@ -873,7 +873,7 @@ class WebhookService {
   async testWebhook(platform) {
     try {
       const testData = {
-        message: 'Claude Relay Service webhook测试',
+        message: 'Flux Code webhook测试',
         timestamp: getISOStringWithTimezone(new Date())
       }
 

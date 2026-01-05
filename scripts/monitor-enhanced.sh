@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# Claude Relay Service - 增强版实时监控脚本
+# Flux Code - 增强版实时监控脚本
 # 结合并发监控和系统状态的完整监控方案
 
 # 加载环境变量
@@ -8,7 +8,7 @@ if [ -f .env ]; then
     export $(grep -v '^#' .env | xargs)
 fi
 
-echo "🔍 Claude Relay Service - 增强版实时监控"
+echo "🔍 Flux Code - 增强版实时监控"
 echo "按 Ctrl+C 退出 | 按 's' 切换详细/简单模式"
 echo "========================================"
 
@@ -139,7 +139,7 @@ get_system_info() {
 monitor_enhanced() {
     while true; do
         clear
-        echo "🔍 Claude Relay Service - 增强版实时监控 | $(date '+%Y-%m-%d %H:%M:%S')"
+        echo "🔍 Flux Code - 增强版实时监控 | $(date '+%Y-%m-%d %H:%M:%S')"
         echo "模式: $DISPLAY_MODE | 服务: $SERVICE_URL | Redis: $REDIS_HOST:$REDIS_PORT"
         echo "========================================"
         

@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# Claude Relay Service - 统一状态检查脚本
+# Flux Code - 统一状态检查脚本
 # 提供完整的系统状态概览
 
 # 加载环境变量
@@ -14,7 +14,7 @@ if [ "$1" = "--detail" ] || [ "$1" = "-d" ]; then
     DETAIL_MODE=true
 fi
 
-echo "🔍 Claude Relay Service - 系统状态检查"
+echo "🔍 Flux Code - 系统状态检查"
 if [ "$DETAIL_MODE" = true ]; then
     echo "模式: 详细信息"
 else

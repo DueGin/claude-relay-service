@@ -665,7 +665,7 @@ async function importData() {
 // 显示帮助信息
 function showHelp() {
   console.log(`
-Data Transfer Tool for Claude Relay Service
+Data Transfer Tool for Flux Code
 
 This tool allows you to export and import data between environments.
 

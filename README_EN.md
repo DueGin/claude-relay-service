@@ -1,4 +1,4 @@
-# Claude Relay Service
+# Flux Code
 
 > [!CAUTION]
 > **Security Update**: v1.1.248 and below contain a critical admin authentication bypass vulnerability allowing unauthorized access to the admin panel.
@@ -491,7 +491,7 @@ Configure the Details as follows:
 | Access List           | Publicly Accessible      |
 
 > Note:
-> - Ensure Claude Relay Service **listens on `0.0.0.0`, container IP, or host IP** to allow NPM internal network connections.
+> - Ensure Flux Code **listens on `0.0.0.0`, container IP, or host IP** to allow NPM internal network connections.
 > - **Websockets Support and Cache Assets must be disabled**, otherwise SSE / streaming responses will fail.
 
 **2. Custom locations**

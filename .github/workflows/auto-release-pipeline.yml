@@ -201,9 +201,9 @@ jobs:
         
         # 添加 README
         cat > README.md << EOF
-        # Claude Relay Service - Web Frontend Build
+        # Flux Code - Web Frontend Build
         
-        This branch contains the pre-built frontend assets for Claude Relay Service.
+        This branch contains the pre-built frontend assets for Flux Code.
         
         **DO NOT EDIT FILES IN THIS BRANCH DIRECTLY**
         
@@ -476,7 +476,7 @@ jobs:
         fi
         
         # 构建消息内容
-        MESSAGE="🚀 *Claude Relay Service 新版本发布！*"$'\n'$'\n'
+        MESSAGE="🚀 *Flux Code 新版本发布！*"$'\n'$'\n'
         MESSAGE+="📦 版本号: \`${VERSION}\`"$'\n'$'\n'
         MESSAGE+="📝 *更新内容:*"$'\n'
         MESSAGE+="${CHANGELOG_TRUNCATED}"$'\n'$'\n'

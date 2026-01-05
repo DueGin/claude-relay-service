@@ -5,7 +5,7 @@ import { apiClient } from '@/config/api'
 export const useSettingsStore = defineStore('settings', () => {
   // 状态
   const oemSettings = ref({
-    siteName: 'Claude Relay Service',
+    siteName: 'Flux Code',
     siteIcon: '',
     siteIconData: '',
     showAdminButton: true, // 控制管理后台按钮的显示
@@ -62,7 +62,7 @@ export const useSettingsStore = defineStore('settings', () => {
 
   const resetOemSettings = async () => {
     const defaultSettings = {
-      siteName: 'Claude Relay Service',
+      siteName: 'Flux Code',
       siteIcon: '',
       siteIconData: '',
       showAdminButton: true,

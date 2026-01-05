@@ -61,7 +61,7 @@
 配置完成后，下次推送到 main 分支时，你的 Telegram 频道将收到类似这样的通知：
 
 ```
-🚀 Claude Relay Service 新版本发布！
+🚀 Flux Code 新版本发布！
 
 📦 版本号: 1.1.3
 

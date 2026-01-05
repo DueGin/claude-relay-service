@@ -128,7 +128,7 @@ const config = {
 
   // 🎨 Web界面配置
   web: {
-    title: process.env.WEB_TITLE || 'Claude Relay Service',
+    title: process.env.WEB_TITLE || 'Flux Code',
     description:
       process.env.WEB_DESCRIPTION ||
       'Multi-account Claude API relay service with beautiful management interface',

@@ -1,13 +1,13 @@
 version: '3.8'
 
-# Claude Relay Service Docker Compose 配置
+# Flux Code Docker Compose 配置
 # 所有配置通过环境变量设置，无需映射 .env 文件
 
 services:
-  # 🚀 Claude Relay Service
+  # 🚀 Flux Code
   claude-relay:
     build: .
-    image: weishaw/claude-relay-service:latest
+    image: duegin/flux-codex:v1.1.252
     restart: unless-stopped
     ports:
       # 绑定地址：生产环境建议使用反向代理，设置 BIND_HOST=127.0.0.1
@@ -69,7 +69,7 @@ services:
       - TIMEZONE_OFFSET=${TIMEZONE_OFFSET:-8}
       
       # 🎨 Web 界面配置
-      - WEB_TITLE=${WEB_TITLE:-Claude Relay Service}
+      - WEB_TITLE=${WEB_TITLE:-Flux Code}
       - WEB_DESCRIPTION=${WEB_DESCRIPTION:-Multi-account Claude API relay service}
       - WEB_LOGO_URL=${WEB_LOGO_URL:-/assets/logo.png}
       

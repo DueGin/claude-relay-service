@@ -1,4 +1,4 @@
-# Claude Relay Service
+# Flux Code
 
 > [!CAUTION]
 > **安全更新通知**：v1.1.248 及以下版本存在严重的管理员认证绕过漏洞，攻击者可未授权访问管理面板。
@@ -858,7 +858,7 @@ Details 配置如下：
 | Access List           | Publicly Accessible     |
 
 > 注意：
-> - 请确保 Claude Relay Service **监听 host 为 `0.0.0.0` 、容器 IP 或本机 IP**，以便 NPM 实现内网连接。
+> - 请确保 Flux Code **监听 host 为 `0.0.0.0` 、容器 IP 或本机 IP**，以便 NPM 实现内网连接。
 > - **Websockets Support 和 Cache Assets 必须关闭**，否则会导致 SSE / 流式响应失败。
 
 **2. Custom locations**

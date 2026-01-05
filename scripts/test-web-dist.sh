@@ -86,9 +86,9 @@ test_build_and_push() {
     
     # 添加 README
     cat > README.md << EOF
-# Claude Relay Service - Web Frontend Build
+# Flux Code - Web Frontend Build
 
-This branch contains the pre-built frontend assets for Claude Relay Service.
+This branch contains the pre-built frontend assets for Flux Code.
 
 **DO NOT EDIT FILES IN THIS BRANCH DIRECTLY**
 

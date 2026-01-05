@@ -116,7 +116,7 @@
                   本月
                 </button>
                 <!-- 测试按钮 - 仅在单Key模式下显示 -->
-                <button
+                <!-- <button
                   v-if="!multiKeyMode"
                   class="test-btn flex items-center justify-center gap-1 px-4 py-2 text-xs font-medium md:gap-2 md:px-6 md:text-sm"
                   :disabled="loading"
@@ -124,7 +124,7 @@
                 >
                   <i class="fas fa-vial text-xs md:text-sm" />
                   测试
-                </button>
+                </button> -->
               </div>
             </div>
           </div>
@@ -212,11 +212,6 @@ const { queryStats, switchPeriod, loadStatsWithApiId, loadOemSettings, reset } =
 
 // 测试弹窗状态
 const showTestModal = ref(false)
-
-// 打开测试弹窗
-const openTestModal = () => {
-  showTestModal.value = true
-}
 
 // 关闭测试弹窗
 const closeTestModal = () => {

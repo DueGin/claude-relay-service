@@ -304,7 +304,7 @@ export const useApiStatsStore = defineStore('apistats', () => {
       console.error('Error loading OEM settings:', err)
       // 失败时使用默认值
       oemSettings.value = {
-        siteName: 'Claude Relay Service',
+        siteName: 'Flux Code',
         siteIcon: '',
         siteIconData: ''
       }

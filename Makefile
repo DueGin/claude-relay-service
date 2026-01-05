@@ -1,11 +1,11 @@
-# Claude Relay Service Makefile
+# Flux Code Makefile
 # 功能完整的 AI API 中转服务，支持 Claude 和 Gemini 双平台
 
 .PHONY: help install setup dev start test lint clean docker-up docker-down service-start service-stop service-status logs cli-admin cli-keys cli-accounts cli-status ci-release-trigger
 
 # 默认目标：显示帮助信息
 help:
-	@echo "Claude Relay Service - AI API 中转服务"
+	@echo "Flux Code - AI API 中转服务"
 	@echo ""
 	@echo "可用命令："
 	@echo ""

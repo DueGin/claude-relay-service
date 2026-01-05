@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# Claude Relay Service 管理脚本
+# Flux Code 管理脚本
 # 用于安装、更新、卸载、启动、停止、重启服务
 # 可以使用 crs 快捷命令调用
 
@@ -378,7 +378,7 @@ persist_install_path() {
 
 # 安装服务
 install_service() {
-    print_info "开始安装 Claude Relay Service..."
+    print_info "开始安装 Flux Code..."
     
     # 询问安装目录
     echo -n "安装目录 (默认: $DEFAULT_INSTALL_DIR): "
@@ -569,7 +569,7 @@ update_service() {
         return 1
     fi
     
-    print_info "更新 Claude Relay Service..."
+    print_info "更新 Flux Code..."
     
     cd "$APP_DIR"
     
@@ -806,7 +806,7 @@ uninstall_service() {
         return 1
     fi
     
-    print_warning "即将卸载 Claude Relay Service"
+    print_warning "即将卸载 Flux Code"
     echo -n "确定要卸载吗？(y/N): "
     read -n 1 confirm
     echo
@@ -1289,7 +1289,7 @@ switch_branch() {
 
 # 显示状态
 show_status() {
-    echo -e "\n${BLUE}=== Claude Relay Service 状态 ===${NC}"
+    echo -e "\n${BLUE}=== Flux Code 状态 ===${NC}"
     
     # 获取实际端口
     local actual_port="$APP_PORT"
@@ -1361,7 +1361,7 @@ show_status() {
 
 # 显示帮助
 show_help() {
-    echo "Claude Relay Service 管理脚本"
+    echo "Flux Code 管理脚本"
     echo ""
     echo "用法: $0 [命令]"
     echo ""
@@ -1384,7 +1384,7 @@ show_help() {
 show_menu() {
     clear
     echo -e "${BOLD}======================================${NC}"
-    echo -e "${BOLD}  Claude Relay Service (CRS) 管理工具  ${NC}"
+    echo -e "${BOLD}  Flux Code (CRS) 管理工具  ${NC}"
     echo -e "${BOLD}======================================${NC}"
     echo ""
     

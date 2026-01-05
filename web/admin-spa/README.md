@@ -1,6 +1,6 @@
-# Claude Relay Service 管理后台 SPA
+# Flux Code 管理后台 SPA
 
-这是 Claude Relay Service 管理后台的 Vue3 SPA 重构版本。
+这是 Flux Code 管理后台的 Vue3 SPA 重构版本。
 
 ## 开发环境要求
 
@@ -120,7 +120,7 @@ npm run dev
 
 ## 部署
 
-构建后的文件需要部署到 Claude Relay Service 的 `web/admin/` 路径下。
+构建后的文件需要部署到 Flux Code 的 `web/admin/` 路径下。
 
 ## 常见问题
 
@@ -129,7 +129,7 @@ A: 这是正常的。应用配置在 `/web/admin/` 路径下，必须访问完�
 
 ### Q: 登录时 API 请求失败（500错误）？
 A: 
-1. **确保主服务运行**：Claude Relay Service 必须运行在 http://localhost:3000
+1. **确保主服务运行**：Flux Code 必须运行在 http://localhost:3000
 2. **检查代理配置**：Vite 会自动代理 `/admin` 和 `/api` 请求到 3000 端口
 3. **重启开发服务器**：如果修改了配置，需要重启 `npm run dev`
 4. **测试代理**：运行 `node test-proxy.js` 检查代理是否正常工作
